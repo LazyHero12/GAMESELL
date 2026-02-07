@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shop - ClutchFiles</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1 class="logo">ClutchFiles 🕹️</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Shop</a>
+    </nav>
+</header>
+
+<section class="store">
+    <h2>Gaming Assets Store</h2>
+
+    <div class="products-grid">
+
+        <div class="product-card">
+            <div class="badge">SALE -20%</div>
+            <img src="images/product1.jpg">
+            <h3>Spider-man Remastered</h3>
+            <div class="rating">★★★★★</div>
+            <p class="price"><span class="old">₹50</span> ₹35</p>
+           <button class="buy-btn" onclick="openUPI()">Buy Now</button>
+
+        </div>
+
+        <div class="product-card">
+            <img src="images/product2.jpg">
+            <h3>God Of War</h3>
+            <div class="rating">★★★★☆</div>
+            <p class="price">₹40</p>
+            <button class="buy-btn">Buy</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/product3.jpg">
+            <h3>Spider-man Miles Morales</h3>
+            <div class="rating">★★★★★</div>
+            <p class="price">₹40</p>
+            <button class="buy-btn">Buy</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/product4.jpg">
+            <h3>Crosshair Pack</h3>
+            <div class="rating">★★★★☆</div>
+            <p class="price">$6</p>
+            <button class="buy-btn">Buy</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/product5.jpg">
+            <h3>Gaming LUTs</h3>
+            <div class="rating">★★★★★</div>
+            <p class="price">$8</p>
+            <button class="buy-btn">Buy</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/product6.jpg">
+            <h3>OBS Presets</h3>
+            <div class="rating">★★★★☆</div>
+            <p class="price">$12</p>
+            <button class="buy-btn">Buy</button>
+        </div>
+
+    </div>
+</section>
+
+</div>
+
+<footer>
+    © 2026 ClutchFiles.com
+</footer>
+<div id="upiModal" class="upi-modal">
+  <div class="upi-box">
+    <span class="close" onclick="closeUPI()">&times;</span>
+    <h2>Pay via UPI</h2>
+    <p><strong>UPI ID:</strong> 6381567448@ybl</p>
+    
+    <img src="images/upi-qr.png" class="upi-qr">
+
+    <a href="upi://pay?pa=6381567448@ybl&pn=ClutchFiles&cu=INR"
+       class="pay-btn">Open UPI App</a>
+
+    <p class="note">After payment, send screenshot on WhatsApp</p>
+  </div>
+</div>
+
+<script>
+function openUPI() {
+  document.getElementById("upiModal").style.display = "block";
+}
+
+function closeUPI() {
+  document.getElementById("upiModal").style.display = "none";
+}
+
+window.onclick = function(e) {
+  let modal = document.getElementById("upiModal");
+  if (e.target == modal) modal.style.display = "none";
+}
+</script>
+
+</body>
+</html>
